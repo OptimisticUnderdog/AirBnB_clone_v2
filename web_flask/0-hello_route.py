@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """
-start Flask application
+Configures content to serve on port 5000
 """
 
 from flask import Flask
+
 app = Flask(__name__)
 
-@app.route('/', strict_slashes=False)
-def index():
-    """returns a string"""
-    return "Hello HBNB!"
 
-if __name__ ==' __main__':
-    app.run(host='0.0.0.0', port='5000')
+@app.route('/airbnb-onepage/', methods=['GET'])
+def hello_route():
+    return "Hello, Route!"
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
