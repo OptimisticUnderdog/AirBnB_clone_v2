@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/airbnb-onepage/', methods=['GET'])
 def hello_route():
-    return "Hello, Route!"
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
